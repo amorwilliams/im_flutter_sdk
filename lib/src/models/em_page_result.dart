@@ -1,3 +1,5 @@
+// @dart=2.9
+
 typedef pageResultCallback = Object Function(dynamic obj);
 
 class EMPageResult<T> {

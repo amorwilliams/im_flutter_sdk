@@ -1,3 +1,5 @@
+// @dart=2.9
+
 typedef cursorResultCallback = Object Function(dynamic obj);
 
 class EMCursorResult<T> {

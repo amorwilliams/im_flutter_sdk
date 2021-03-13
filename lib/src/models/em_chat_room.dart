@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:im_flutter_sdk/src/models/em_domain_terms.dart';
 
 enum EMChatRoomPermissionType {
@@ -8,27 +10,26 @@ enum EMChatRoomPermissionType {
 }
 
 class EMChatRoom {
-
   EMChatRoom._private();
 
   String toString() => toJson().toString();
 
-  factory EMChatRoom.fromJson(Map <String, dynamic> map) {
-    if(map == null) return null;
+  factory EMChatRoom.fromJson(Map<String, dynamic> map) {
+    if (map == null) return null;
     return EMChatRoom._private()
-    .._roomId = map['roomId'] as String
-    .._name = map['name']
-    .._description = map['desc']
-    .._owner = map['owner']
-    .._memberCount = map['memberCount']
-    .._maxUsers = map['maxUsers']
-    .._adminList = map['adminList']
-    .._memberList = map['memberList']
-    .._blockList = map['blockList']
-    .._muteList = map['muteList']
-    .._announcement = map['announcement']
+      .._roomId = map['roomId'] as String
+      .._name = map['name']
+      .._description = map['desc']
+      .._owner = map['owner']
+      .._memberCount = map['memberCount']
+      .._maxUsers = map['maxUsers']
+      .._adminList = map['adminList']
+      .._memberList = map['memberList']
+      .._blockList = map['blockList']
+      .._muteList = map['muteList']
+      .._announcement = map['announcement']
 //    .._permissionType = EMChatRoom.permissionTypeFromInt(map['permissionType'])
-    .._isAllMemberMuted =  map.boolValue('isAllMemberMuted');
+      .._isAllMemberMuted = map.boolValue('isAllMemberMuted');
   }
 
   Map<String, dynamic> toJson() {
@@ -88,13 +89,12 @@ class EMChatRoom {
   get memberList => _memberList;
   get blockList => _blockList;
   get muteList => _muteList;
-  get isAllMemberMuted  => _isAllMemberMuted;
+  get isAllMemberMuted => _isAllMemberMuted;
   get permissionType => _permissionType;
-
 
   static EMChatRoomPermissionType permissionTypeFromInt(int type) {
     EMChatRoomPermissionType ret = EMChatRoomPermissionType.Member;
-    switch(type){
+    switch (type) {
       case -1:
         return EMChatRoomPermissionType.None;
       case 0:
@@ -109,7 +109,7 @@ class EMChatRoom {
 
   static int permissionTypeToInt(EMChatRoomPermissionType type) {
     int ret = 0;
-    switch(type){
+    switch (type) {
       case EMChatRoomPermissionType.None:
         return -1;
       case EMChatRoomPermissionType.Member:

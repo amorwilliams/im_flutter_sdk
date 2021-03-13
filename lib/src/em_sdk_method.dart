@@ -1,3 +1,5 @@
+// @dart=2.9
+
 class EMSDKMethod {
   /// EMClient methods
   static const String init = 'init';

@@ -1,6 +1,6 @@
+// @dart=2.9
+
 class EMDeviceInfo {
-
-
   EMDeviceInfo._private();
 
   Map toJson() {
@@ -20,8 +20,10 @@ class EMDeviceInfo {
 
   /// 设备资源描述
   String get resource => _resource;
+
   /// 设备的UUID
   String get deviceUUID => _deviceUUID;
+
   /// 设备名称
   String get deviceName => _deviceName;
 

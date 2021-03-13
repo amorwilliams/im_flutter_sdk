@@ -1,3 +1,5 @@
+// @dart=2.9
+
 class EMContact {
   factory EMContact.fromJson(Map map) {
     return EMContact._private()

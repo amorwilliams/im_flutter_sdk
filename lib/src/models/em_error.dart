@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:im_flutter_sdk/im_flutter_sdk.dart';
 
 class EMError {
