@@ -1,3 +1,4 @@
+// @dart=2.9
 library im_flutter_sdk;
 
 export 'src/em_client.dart';
